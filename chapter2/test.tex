@@ -1,0 +1,115 @@
+\documentclass{easybook}
+\usepackage{mathtools}
+\usetikzlibrary{angles,quotes}
+\begin{document}
+\begin{enumerate}
+    \item 画图易知
+    \item \begin{eqnarray*}
+              & f^{\prime} = 75mm\\
+              & x = -\infty,x^{\prime} = 0mm\\
+              & x = -10000mm,x^{\prime} = 0.5625mm\\
+              & x = -8000mm,x^{\prime} = 0.703125mm\\
+              & x = -6000mm,x^{\prime} = 0.9375mm\\
+              & x = -4000mm,x^{\prime} = 1.40625mm\\
+              & x = -2000mm,x^{\prime} = 2.8125mm\\
+          \end{eqnarray*}
+    \item \begin{eqnarray*}
+              & \beta = -10 = -\frac{fl^{\prime}}{f^{\prime}l} = \frac{l^{\prime}}{l}\\
+              & -l + l^{\prime} + d = 7200mm,-f+f^{\prime} + d  = 1140mm\\
+              & \frac{1}{l^{\prime}} - \frac{1}{l} = \frac{1}{f^{\prime}},-f = f^{\prime}\\
+          \end{eqnarray*}
+          解得 $l=-660mm,l^{\prime}=6600mm,f = -600mm,f^{\prime} = 600mm,d = -60mm$
+    \item \begin{eqnarray*}
+              \beta_1 = -3 = \frac{l_1^\prime}{l_1}\\
+              \beta_2 = -4 = \frac{l_2^\prime}{l_2}\\
+              \frac{1}{l_1^\prime} - \frac{1}{l_1} = \frac{1}{f^\prime}\\
+              \frac{1}{l_2^\prime} - \frac{1}{l_2} = \frac{1}{f^\prime}\\
+              l_2 = l_1 + 18mm
+          \end{eqnarray*}
+          解得 $l_1 = -288mm,l_2 = -270mm,l_1^\prime = -864mm,l_2^\prime = -1080mm,f^\prime = 216mm$
+    \item \begin{eqnarray*}
+              & \beta_1 = -1 = \frac{l_1^\prime}{l},\frac{1}{l_1^\prime} - \frac{1}{l} = \frac{1}{f_1^\prime}\\
+              & \beta_2 = -\frac{3}{4}=\frac{l^\prime}{l},\frac{1}{l^\prime} - \frac{1}{l} = \frac{1}{f^\prime}\\
+              & l^\prime = l_1^\prime - 20mm,\frac{1}{f^\prime} = \frac{1}{f_1^\prime} + \frac{1}{f_2^\prime}
+          \end{eqnarray*}
+    \item \begin{eqnarray*}
+              & \beta_1  = -\frac{1}{2} = \frac{l_1^\prime}{l_1}\\
+              & \frac{1}{l_1^\prime} - \frac{1}{l_1} = \frac{1}{f^\prime}\\
+              & \beta_2 = -1 = \frac{l_2^\prime}{l_2}\\
+              & \frac{1}{l_2^\prime} - \frac{1}{l_2} = \frac{1}{f^\prime}\\
+              & l_2 = l_1 + 100mm
+          \end{eqnarray*}
+          解得 $f^\prime = 100mm$
+    \item \begin{eqnarray*}
+              & \frac{1}{f^\prime} = \frac{1}{f_1^\prime} + \frac{1}{f_2^\prime} - \frac{d}{f_1^\prime f_2^\prime} = 1200mm\\
+              & d + l_2^\prime = 700mm\\
+              & l_2^\prime = 400mm\\
+              & d = 300mm,l_1 = -\infty\\
+              & l_1^\prime = f_1^\prime,l_2 = f_1^\prime - d\\
+              & \frac{1}{l_2^\prime} - \frac{1}{l_2} = \frac{1}{f_2^\prime}
+          \end{eqnarray*}
+          解得 $f_1^\prime = 450mm,f_2^\prime = -240mm$
+    \item 仅考虑双光组结构
+          \begin{eqnarray*}
+              & \frac{1}{f^\prime} = \frac{1}{f_1^\prime} + \frac{1}{f_2^\prime} - \frac{d}{f_1^\prime f_2^\prime} = \frac{1}{35mm},d = L - l_k^\prime\\
+              & h_1 = 100mm,h_2 = h_1 - d\tan U_1^\prime,\tan U_1^\prime = \frac{h_1}{f_1^\prime}\\
+              & \tan U_2^\prime = \frac{h_2}{l_k^\prime} = \frac{h_1}{f^\prime}
+          \end{eqnarray*}
+          解得 $f_1^\prime = -35mm,f_2^\prime = 25mm$
+    \item \begin{eqnarray*}
+              & \frac{n}{f_1^\prime} = \frac{n- 1}{r_1},f_1^\prime =  -600mm\\
+              & \frac{1}{f_2^\prime} = \frac{1-n}{r_2},f_2^\prime = 600mm\\
+              & \Delta = d - f_1^\prime + f_2 \\
+              & \frac{1}{f_2} = \frac{n-1}{nr_2},f_2 = -900mm,\Delta = -250mm\\
+              & f^\prime = -\frac{f_1^\prime f_2^\prime}{\Delta} = -1440mm,\Phi = \frac{1}{f^\prime}\\
+              & l_2 = f_1^\prime - d = -650mm\\
+              & \frac{1}{l_2^\prime} - \frac{n}{l_2} = \frac{1-n}{r_2},
+          \end{eqnarray*}
+    \item \begin{eqnarray*}
+              & \Delta = d - f_1^\prime - f_2,f_1^\prime = 100mm,f_2^\prime = 50mm\\
+              & f^\prime = -\frac{f_1^\prime f_2^\prime}{\Delta} = 100mm,f_2 = -50mm\\
+              & d = 100mm
+          \end{eqnarray*}
+    \item \begin{eqnarray*}
+              & r_1 = 10mm,r_2 = -10mm,n = 1.5,d = 60mm\\
+              & f_1^\prime = \frac{nr_1}{n-1} = 30mm,f_2^\prime = \frac{r_2}{1-n} = 20mm,f_2 = \frac{nr_2}{n-1} = -30mm\\
+              & \Delta = d - f_1^\prime + f_2 = 0mm\\
+              & f^\prime = -\frac{f_1^\prime f_2^\prime}{\Delta} = \infty \\
+              & l_2 = f_1^\prime - d = -30mm\\
+              & \frac{1}{l_2^\prime} - \frac{n}{l_2} = \frac{1-n}{r_2},l_2^\prime = \infty
+          \end{eqnarray*}
+
+          无焦系统出射光线平行于光轴，焦点和主点在无穷远处。
+
+    \item \begin{eqnarray*}
+              & l_1^\prime = \frac{nr}{n-1} = 480mm\\
+              & \frac{2}{r} = \frac{1}{80mm}\\
+              & r = 160mm,n = 1.5\\
+          \end{eqnarray*}
+    \item  条件一：间隔不变，物距任意，放大率不变
+          \begin{eqnarray*}
+              & x_1 x_1^\prime = -f_1^{\prime^2}\\
+              & - x_2 = d - x_1^\prime -f_1^\prime - f_2^\prime\\
+              & x_2 x_2^\prime = -f_2^{\prime^2}\\
+              & \beta = \beta_1 \beta_2 = \frac{f_1^\prime}{x_1} \frac{f_2^\prime}{x_2} = \frac{f_1^\prime f_2^\prime}{(f_1^\prime + f_2^\prime - d)x_1 - f_1^{\prime^2}} = constant\\
+              & \frac{1}{\beta} = \frac{(f_1^\prime + f_2^\prime - d)x_1 - f_1^{\prime^2}}{f_1^\prime f_2^\prime}\\
+              &\frac{d (\frac{1}{\beta})}{d x_1} = 0 = \frac{f_1^\prime + f_2^\prime - d}{f_1^\prime f_2^\prime}\\
+          \end{eqnarray*}
+          条件二：间隔变化，物距不变，放大率不变
+
+          \begin{equation*}
+              \frac{d (\frac{1}{\beta})}{d d} = 0 = -\frac{x_1}{f_1^\prime f_2^\prime}
+          \end{equation*}
+    \item \begin{eqnarray*}
+              & l_1 = f_1,l_1^\prime = \infty \\
+              & l_2 = \infty,l_2^\prime = f_2^\prime \\
+              & \Delta = d - f_1^\prime - f_2^\prime\\
+              & \beta = \beta_1 \beta_2 = \frac{f_1 l_1^\prime}{f_1^\prime l_1} \frac{f_2 l_2^\prime}{f_2^\prime l_2}
+              = \frac{l_1^\prime l_2^\prime}{l_1 l_2} = \frac{f_2^\prime}{-f_1^\prime}\\
+              & f^\prime = -\frac{f_1^\prime f_2^\prime}{\Delta} = \frac{f_1^\prime f_2^\prime}{f_1^\prime+f_2^\prime-d}\\
+              & x_F^\prime = \frac{f_2^{\prime^2}}{ d - f_1^\prime - f_2^\prime}
+          \end{eqnarray*}
+    \item
+\end{enumerate}
+\end{document}
+

@@ -1,0 +1,237 @@
+\documentclass{easybook}
+\usepackage{mathtools}
+\usetikzlibrary{angles,quotes}
+\begin{document}
+\begin{enumerate}
+    \item 小孔成像
+    \item \begin{eqnarray*}
+              c'=&\frac{c}{n}\\
+              c_{水}=&\frac{c}{1.33}\\
+              c_{冕牌玻璃}=&\frac{c}{1.51}\\
+              c_{火石玻璃}=&\frac{c}{1.65}\\
+              c_{加拿大树胶}=&\frac{c}{1.526}\\
+              c_{金刚石}=&\frac{c}{2.417}
+          \end{eqnarray*}
+    \item 求像距$s^{'}_{1}$
+          \begin{eqnarray*}
+              & \frac{h}{s}=\frac{h^{'}_{1}}{s^{'}_{1}}=\frac{h^{'}_{2}}{s^{'}_{2}}\\
+              & h^{'}_{1} = 60mm,h^{'}_{2} = 70mm, s^{'}_{2} = s^{'}_{1}+50mm\\
+              & s^{'}_{1} = \frac{h^{'}_{1}\times s^{'}_{2}}{h^{'}_{2}} = \frac{60mm\times (s^{'}_{1}+50mm)}{70mm}\\
+              & s^{'}_{1} = 300mm
+          \end{eqnarray*}
+    \item 因为全反射的条件是入射角大于临界角，所以
+          \begin{eqnarray*}
+              & n \sin(\theta) = n' \sin(\theta')\\
+              & n = 1.5,n' = 1.0,\theta' = \frac{\pi}{2}\\
+              & \sin(\theta) = \frac{2}{3}\\
+              & w_{max} = w + 2h\tan(\theta) = 1mm+2\times 200mm\tan(\arcsin(\frac{2}{3})) = 358.77mm
+          \end{eqnarray*}
+    \item 光疏到光密的界面，无法全反射
+    \item 设入射角为$\theta$，入射介质折射率为$n$，出射介质折射率为$n'$，则有
+          \begin{equation*}
+              n \sin(\theta) = n' \sin(\theta')
+          \end{equation*}
+          则出射平板的角也为$\theta$，可知入射光线与出射光线平行。
+    \item \begin{equation*}
+              n \sin(\alpha) = \sin(\delta)
+          \end{equation*}
+    \item 光纤内需全反射，
+          \begin{eqnarray*}
+              & \frac{n_2}{n_1} = \sin (\theta_{min}) \\
+              & n_0 \sin(I_1) = n_1 \sin (\theta_{min}) = n_2
+          \end{eqnarray*}
+    \item \begin{eqnarray*}
+              & \sin(\theta_0) = n \sin(\theta_{0}^{'}) \\
+              & \frac{\pi}{4} = \theta_{0}^{'} + \theta_1 \\
+              & n \sin(\theta_1) \geq 1 \\
+              &   0 \leq \theta_0  \leq 0.099
+          \end{eqnarray*}
+    \item 费马证明折射
+
+          \begin{tikzpicture}
+              \draw (-4,0) -- (4,0) node[right] {界面};
+              \node [above] at (0,2) {介质1（$n$）};
+              \draw [thick] (-3,2) -- (0,0);
+              \draw [thick] (0,-1) -- (0,1);
+              \path (-3,2) coordinate (A) (0,0) coordinate (O) (0,1) coordinate (N);
+              \pic [draw, angle radius=8mm, "$\theta$"] at (O) {angle = N--O--A};
+              \path (0,0) coordinate (O) (2,-2) coordinate (B) (0,-1) coordinate (M);
+              \pic [draw, angle radius=8mm, "$\theta'$"] at (O) {angle = M--O--B};
+              \draw [thick,->] (0,0) -- (2,-2);
+              \draw [thick,->] (0,0) -- (2,-2);
+              \draw [dashed] (-3,2) -- (-3,0) node[midway,left] {$h$};
+              \draw [dashed] (2,-2) -- (2,0) node[midway,right] {$h'$};
+              % ISO-style dimension from (-3,0) to (2,0) labeled L
+              \draw (-3,0) -- ++(0,-0.8); % left extension line
+              \draw (2,0)  -- ++(0,-0.8); % right extension line
+              \draw (0,0)  -- ++(0,-0.8); % right extension line
+              \draw[<->, >=stealth, line cap=butt] (-3,-0.6) -- node[below=2pt] {$L$} (2,-0.6);
+              \draw[<->, >=stealth, line cap=butt] (-3,-0.3) -- node[below=2pt] {$x$} (0,-0.3);
+          \end{tikzpicture}
+
+          根据几何关系，有光程
+          \begin{eqnarray*}
+              & S_1 = n\sqrt{h^2 + x^2} \\
+              & S_2 = n'\sqrt{h^{\prime2} + (L-x)^2} \\
+              & S = S_1 + S_2 = n\sqrt{h^2 + x^2} + n'\sqrt{h^{\prime2} + (L-x)^2} \\
+          \end{eqnarray*}
+
+          由费马原理，$S$取极值时，光线实际走过的路径。对$x$求导，有
+          \begin{equation*}
+              \frac{dS}{dx} = \frac{n x}{\sqrt{h^2 + x^2}} - \frac{n' (L-x)}{\sqrt{h^{\prime2} + (L-x)^2}} = 0
+          \end{equation*}
+
+          即
+          \begin{eqnarray*}
+              & \frac{n x}{\sqrt{h^2 + x^2}} = \frac{n' (L-x)}{\sqrt{h^{\prime2} + (L-x)^2}} \\
+              & n \sin(\theta) = n \frac{x}{\sqrt{h^2 + x^2}} \\
+              & n' \sin(\theta') = n' \frac{L-x}{\sqrt{h^{\prime 2} + (L-x)^2}} \\
+              & n \sin(\theta) = n' \sin(\theta')
+          \end{eqnarray*}
+    \item 考虑光程差存在于反射段则
+          \begin{eqnarray*}
+              & \tan\left(\theta\right) = \frac{dy}{dx} \\
+              & f = y + \frac{x}{\tan(\theta)} \\
+              & \frac{df}{dx} = 0 = \frac{1+y^{\prime2}}{2y^\prime}-
+              \frac{xy^{\prime\prime}(1+y^{\prime2})}{2y^{\prime2}} \\
+          \end{eqnarray*}
+          化简为
+            \begin{equation*}
+                x y^{\prime\prime} - y^{\prime2} = 0
+            \end{equation*}
+            解得
+            \begin{equation*}
+                y = C_1 x^2 + C_2
+            \end{equation*}
+          即抛物线
+    \item 考虑光程和
+    \begin{equation*}
+        c = n \sqrt{(x-l)^2 + y^2} + n^{\prime} \sqrt{(x-l^{\prime})^2 + y^2}
+    \end{equation*}
+    即笛卡尔卵形线
+    \item \begin{eqnarray*}
+                & \beta = \frac{y'}{y} = \frac{nl^{\prime}}{n^{\prime}l} \\
+                & n_k^\prime = n_{k+1} \\
+                & \beta = \frac{y_1^\prime}{y_1} \cdot \frac{y_2^\prime}{y_2} = \frac{n_1 l^{\prime}_1}{n^{\prime}_1 l_1} \cdot \frac{n_2 l^{\prime}_2}{n^{\prime}_2 l_2} \\
+                & \beta = \frac{n_1 l^{\prime}_1 l^{\prime}_2}{n^{\prime}_2 l_1 l_2} 
+    \end{eqnarray*}
+    \item 画图可知
+    \begin{equation}
+        2\theta = \theta^{\prime}
+    \end{equation}
+    所以考虑小角即$\sin(\theta) \approx \theta$，有
+    \begin{eqnarray*}
+        & n \sin(\theta) = \sin(\theta^{\prime}) \\
+        & n \theta = 2\theta \\
+        & n = 2
+    \end{eqnarray*}
+    \item 入射和出射光线平行
+    \item \begin{eqnarray*}
+        & l_1 = -\infty,  r = 30mm , n_1^\prime = 1.5, n_1 = 1.0 \\
+        & \frac{n_1^\prime}{l_1^\prime} - \frac{n_1}{l_1} = \frac{n_1^\prime - n_1}{r} \\
+        & l_1^\prime = 90mm \\
+        & l_2 = l_1^\prime - 2r = 30mm,n_2 = n_1^\prime,n_2^\prime = n_1 \\
+        & \frac{n_2^\prime}{l_2^\prime} - \frac{n_2}{l_2} = \frac{n_2^\prime - n_2}{-r} \\
+        & l_2^\prime = 15mm \\
+        & \beta = \frac{l_1^\prime l_2^\prime}{l_1 l_2} < 0 
+    \end{eqnarray*}
+    为实像
+    \begin{eqnarray*}
+        & l = -\infty,  r = 30mm  \\
+        & \frac{1}{l^\prime} + \frac{1}{l} = \frac{2}{r} \\
+        & l^\prime = 15mm
+    \end{eqnarray*}
+    为虚像
+
+    由第一个公式可知，$l_2 = 30mm$
+    \begin{eqnarray*}
+        & \frac{1}{l_2^\prime} + \frac{1}{l_2} = \frac{2}{-r} \\
+        & l_2^\prime = -10mm \\
+        & l_3 = l_2^\prime + 2r = 50mm,n_3 = n_2 = 1.5,n_3^\prime = n_2^\prime = 1 \\
+        & \frac{n_3^\prime}{l_3^\prime} - \frac{n_3}{l_3} = \frac{n_3^\prime - n_3}{r} \\
+        & l_3^\prime = 75mm \\
+    \end{eqnarray*}
+    \item
+    \begin{eqnarray*}
+        &\beta = \frac{nl^{\prime}}{n^{\prime}l}\\
+        & r = 150mm,n =1 ,n^{\prime} = 1.5\\
+        & n\left(\frac{1}{r}-\frac{1}{l}\right) = n^{\prime}\left(\frac{1}{r}-\frac{1}{l^{\prime}}\right)\\
+        & \beta = \frac{2r}{2r+l}\\
+        & l = -\infty, l^{\prime} = 450mm,\beta = 0\\
+        & l = -1000mm,l^{\prime} = 642.8571mm,\beta = 0.23\\
+        & l = -100mm,l^{\prime} = -225mm,\beta = 0.75\\
+        & l = 0mm,l^{\prime} = 0mm,\beta = 1\\
+        & l = 150mm,l^{\prime} = 150 mm ,\beta = 2\\
+        & l = 200mm,l^{\prime} = 180 mm ,\beta = 3
+    \end{eqnarray*}
+    \item 中心气泡
+    \begin{eqnarray*}
+        & l = r = -200mm,n =1.5 ,n^{\prime} = 1 \\
+        & \frac{n^{\prime}}{l^{\prime}} - \frac{n}{l} = \frac{n^{\prime} - n}{r} \\
+        & l^{\prime} = -200mm
+    \end{eqnarray*}
+    1/2半径气泡
+    \begin{eqnarray*}
+        & l = -300mm ，r = -200mm,n =1.5 ,n^{\prime} = 1 \\
+        & \frac{n^{\prime}}{l^{\prime}} - \frac{n}{l} = \frac{n^{\prime} - n}{r} \\
+        & l^{\prime} = -400mm
+    \end{eqnarray*}
+    换一边观察
+    \begin{eqnarray*}
+        & l = -100mm,r=-200mm,n =1.5 ,n^{\prime} = 1 \\
+        & l^{\prime} = -80mm
+    \end{eqnarray*}
+    \item \begin{eqnarray*}
+        & l_1 = -\infty,r_1 = 100mm,r_2 = \infty,n_1 = 1,n_1^{\prime} = n_2 = 1.5,n_2^{\prime} = 1 \\
+        & \frac{n_1^{\prime}}{l_1^{\prime}} - \frac{n_1}{l_1} = \frac{n_1^{\prime} - n_1}{r_1} = \frac{n_1^{\prime}}{l_1^{\prime}} \\
+        & l_1^{\prime} = 300mm,l_2 = l_1^{\prime} - d = 0mm\\
+        & l_2^{\prime} = 0mm\\
+    \end{eqnarray*}
+    在第二面的十字线上
+    \begin{eqnarray*}
+        & l_1 = -d = -300mm,r =-100mm,n = 1.5 ,n^{\prime} = 1 \\
+        & \frac{n^{\prime}}{l^{\prime}} - \frac{n}{l} = \frac{n^{\prime} - n}{r} \\
+        & l^{\prime} = \infty\\
+    \end{eqnarray*}
+    $h=10mm$时不能认为是高斯成像
+    \begin{eqnarray*}
+        & \sin(\theta_1) = \frac{10mm}{300mm}\\
+        & n_1 \sin(\theta_1) = n_1^{\prime} \sin(\theta_1^{\prime})\\
+        & \frac{\sin(\theta_1^{\prime}-\theta_1) }{r} = \frac{\sin(\theta_1^{\prime})}{l_1^{\prime} - r}\\
+        & \theta_2 = \theta_1^{\prime} - \theta_1 \\
+        & n_1^{\prime} \sin(\theta_2) = n_1 \sin(\theta_2^{\prime})\\
+        & l_2 = l_1^{\prime} - d \\
+        & h_2 = l_2 \tan(-\theta_2) \\
+        & l_2^{\prime} = \frac{h_2}{\tan(-\theta_2^{\prime})}
+    \end{eqnarray*}
+    \item \begin{eqnarray*}
+        & r = -100mm,\beta = -\frac{l^{\prime}}{l},\frac{1}{l^{\prime}} + \frac{1}{l} = \frac{2}{r}\\
+        & \beta  = 0,l = -\infty , l^{\prime} = -50mm\\
+        & \beta  = -0.1,l = -550mm,l^{\prime} = -55mm\\
+        & \beta  = -0.2,l = -300mm,l^{\prime} = -60mm\\
+        & \beta  = -1,l = -100mm,l^{\prime} = -100mm\\
+        & \beta = 1,l = 0mm,l^{\prime} = 0mm\\
+        & \beta  = 5,l = -40mm,l^{\prime} = 200mm\\
+        & \beta  = 10,l = -40mm,l^{\prime} = 450mm\\
+        & \beta = \infty,l = -50mm,l^{\prime} = \infty\\
+    \end{eqnarray*}
+    \item $\beta <0$ 时虚实相同，$\beta >0$ 时虚实相反
+    
+    \begin{eqnarray*}
+        & \beta = -4,l = \frac{8}{5r},l^{\prime} = \frac{5}{2r}\\
+        & \beta = 4,l = \frac{8}{3r},l^{\prime} = -\frac{3}{2r}\\
+        & \beta = -\frac{1}{4},l = \frac{5}{2r},l^{\prime} = \frac{8}{5r}\\
+        & \beta = \frac{1}{4},l = -\frac{3}{2r},l^{\prime} = \frac{3}{8r}\\
+    \end{eqnarray*}
+
+    \item 考虑几何关系，只有入射第一面的像成像于反射面上，出射光线与入射光线平行
+    \begin{eqnarray*}
+        & l_1 = -\infty , l_1^{\prime}=2r \\
+        & \frac{n}{l_1^{\prime}} - \frac{1}{l_1} = \frac{n-1}{r} \\
+        & n = 2\\
+        \end{eqnarray*}
+    \item \begin{equation}
+        \theta = (2n-1)\alpha
+    \end{equation}
+\end{enumerate}
+\end{document}
