@@ -1,6 +1,5 @@
 \documentclass{easybook}
 \usepackage{mathtools}
-\usetikzlibrary{angles,quotes}
 \begin{document}
 \begin{enumerate}
     \item 画图易知
@@ -81,10 +80,11 @@
 
           无焦系统出射光线平行于光轴，焦点和主点在无穷远处。
 
-    \item \begin{eqnarray*}
-              & l_1^\prime = \frac{nr_2}{n-1} = 480mm\\
-              & \frac{2}{r} = \frac{1}{80mm}\\
-              & r = 160mm,n = 1.5\\
+    \item 设镜片厚度为极小$d\approx0$ 
+    \begin{eqnarray*}
+              & l_1^\prime = \frac{r}{1-n} = 480mm\\
+              & \frac{2}{r} = \frac{1}{l^\prime},\frac{n}{l^\prime + d} = \frac{1}{-80mm}\\
+              & r = -240mm,n = 1.5\\
           \end{eqnarray*}
     \item  条件一：间隔不变，物距任意，放大率不变
           \begin{eqnarray*}
@@ -113,17 +113,27 @@
     \item $r_1 = 120mm,r_2=-320mm,d=30mm,n=1.6$
 
           \begin{eqnarray*}
-              & f_1 = \frac{r_1}{1-n} = -200mm,f_1^\prime = \frac{nr_1}{n-1}=320mm,f_2 = \frac{nr_2}{n-1} = -\frac{2560}{3}mm
-              ,f_2^\prime = \frac{r_2}{1-n} = \frac{1600}{3}mm \\
-              & \Delta = d - f_1^\prime + f_2 = -\frac{3430}{3}mm\\
-              & f^\prime = -\frac{f_1^\prime f_2^\prime}{\Delta} = \frac{51200}{343}mm\\
-              & x^\prime_F = -\frac{f_2 f_2^\prime}{\Delta}=-398.056mm,x_F = \frac{f_1 f_1^\prime}{\Delta} = \frac{19200}{343}mm\\
+              & f_1 = \frac{r_1}{1-n} = -200mm,f_1^\prime = \frac{nr_1}{n-1}=320mm,f_2 = \frac{nr_2}{n-1} = -853.333mm
+              ,f_2^\prime = \frac{r_2}{1-n} = 533.333mm \\
+              & \Delta = d - f_1^\prime + f_2 = -1143.333mm\\
+              & f^\prime = -\frac{f_1^\prime f_2^\prime}{\Delta} = 149.271mm = -f\\
+              & x^\prime_F = -\frac{f_2 f_2^\prime}{\Delta}=-398.056mm,x_F = \frac{f_1 f_1^\prime}{\Delta} = 55.977mm\\
               & l_H = f_1 + x_F - f=5.248mm,l_H^\prime = f_2^\prime + x_F^\prime - f^\prime = -13.993mm \\
-              & l_1 = -5000mm,\frac{1}{l_1^\prime + l_H^\prime} - \frac{1}{l_1 - l_H} = \frac{1}{f^\prime},l_1^\prime = 139.867mm\\
+              & l_1 = -5000mm,\frac{1}{l_1^\prime - l_H^\prime} - \frac{1}{l_1 - l_H} = \frac{1}{f^\prime},l_1^\prime = 139.867mm\\
           \end{eqnarray*}
           轴的位置过像方主点位于像方主面内
 
     \item 同上计算只需改变入射侧的折射率从空气的1改为水的1.33
+    \begin{eqnarray*}
+        & f_1 = \frac{n_1 r_1}{n_1 - n_2} = -591.111mm,f_1^\prime = \frac{n_2 r_1}{n_2 - n_1} =711.111mm\\
+        & f_2 = \frac{n_2 r_2}{n_2 - 1} = -853.333mm,f_2^\prime = \frac{r_2}{1 - n_2} = 533.333mm\\ 
+        & \Delta = d - f_1^\prime + f_2 = -1534.444mm\\
+        & f^\prime = - \frac{f_1^\prime f_2^\prime}{\Delta} = 247.164mm,f = \frac{f_1 f_2}{\Delta} = -328.728mm\\
+        & x_F^\prime = - \frac{f_2 f_2^\prime}{\Delta} = -296.596mm,x_F = \frac{f_1 f_1^\prime}{\Delta} = 273.940mm\\
+        & l_F = f_1 + x_F = -317.171mm,l_H = l_F - f = 11.557mm\\
+        & l_F^\prime = f_2^\prime + x_F^\prime = 236.737mm,l_H^\prime = l_F^\prime - f^\prime = -10.427mm\\
+        & l_1 = -5000mm,\frac{f}{l_1 - l_H} + \frac{f^\prime}{l_1^\prime - l_H^\prime} = 1,l_1^\prime = 254.088mm\\
+    \end{eqnarray*}
     \item 注：这里实际上$f_1$为$f_1^\prime$
           \begin{eqnarray*}
               & h_1 = f_1^\prime \tan(U_1^\prime) = 50mm \\
@@ -146,10 +156,10 @@
           \end{eqnarray*}
     \item
           \begin{eqnarray*}
-              &\Delta = d - f_1^\prime + f_2=75mm,f^\prime = - \frac{f_1^\prime f_2^\prime}{\Delta} = -\frac{400}{3}mm = -f\\
-              &x_F^\prime = - \frac{f_2 f_2^\prime}{\Delta} = \frac{400}{3}mm,x_F = \frac{f_1 f_1^\prime}{\Delta} = -\frac{400}{3}mm\\
-              &x = -50 - f_1 - x_F = \frac{550}{3}mm,x^\prime = \frac{f f^\prime}{x} = -\frac{3200}{33}mm\\
-              &x_2^\prime = f_2 + x_F^\prime + x^\prime = \frac{1500}{11}mm
+              &\Delta = d - f_1^\prime + f_2=-125mm,f^\prime = - \frac{f_1^\prime f_2^\prime}{\Delta} = 80mm = -f\\
+              &x_F^\prime = - \frac{f_2 f_2^\prime}{\Delta} = -80mm,x_F = \frac{f_1 f_1^\prime}{\Delta} = 80mm\\
+              &x = -50 - f_1 - x_F = -30mm,x^\prime = \frac{f f^\prime}{x} = 213.333mm\\
+              &l_2^\prime = f_2^\prime + x_F^\prime + x^\prime = 233.333mm
           \end{eqnarray*}
     \item 
           对无穷远物成实像，$l_F^\prime = x_F^\prime + f_2^\prime > 0$,即像方焦点在第二面右侧
